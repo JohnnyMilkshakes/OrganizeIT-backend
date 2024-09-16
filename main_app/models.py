@@ -16,4 +16,4 @@ class Item(models.Model):
     location = models.ForeignKey(Location, on_delete=models.CASCADE)
     
     def __str__(self):
-        return f"{self.name()} belongs to {self.user}"
+        return f"Item: {self.name} belongs to Location: {self.location}"
