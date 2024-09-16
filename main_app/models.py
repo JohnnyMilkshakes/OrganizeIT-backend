@@ -8,6 +8,9 @@ class Location(models.Model):
     address = models.CharField(max_length=100)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     
+    def __str__(self):
+        return f"Location: '{self.name}' belongs to User: {self.user}"
+    
 class Item(models.Model):
     name = models.CharField(max_length=100)
     description = models.TextField(max_length=250)
@@ -16,4 +19,4 @@ class Item(models.Model):
     location = models.ForeignKey(Location, on_delete=models.CASCADE)
     
     def __str__(self):
-        return f"Item: {self.name} belongs to Location: {self.location}"
+        return f"Item: '{self.name}' belongs to Location: {self.location}"
