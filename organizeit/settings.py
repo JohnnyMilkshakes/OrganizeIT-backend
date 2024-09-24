@@ -50,6 +50,7 @@ ALLOWED_HOSTS = ['localhost', '127.0.0.1', '.herokuapp.com']
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",  # Adjust the port if your frontend runs on a different one
+
     "http://127.0.0.1:5173",
     "https://dev--admirable-cranachan-fb11f5.netlify.app",
     "https://admirable-cranachan-fb11f5.netlify.app"
@@ -134,6 +135,7 @@ WSGI_APPLICATION = 'organizeit.wsgi.application'
 
 
 DATABASES = {
+
     'default': 
         dj_database_url.config('DATABASE_URL')
 }
