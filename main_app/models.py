@@ -15,7 +15,7 @@ class Location(models.Model):
 class Item(models.Model):
     name = models.CharField(max_length=100)
     description = models.TextField(max_length=250)
-    quantity = models.PositiveIntegerField()
+    quantity = quantity = models.IntegerField()
     storage_area = models.TextField(max_length=100)
     location = models.ForeignKey(Location, on_delete=models.CASCADE)
     
